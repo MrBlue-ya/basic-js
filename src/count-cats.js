@@ -14,7 +14,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  * ]) => 3`
  *
  */
-
 function countCats(matrix) {
   return matrix.reduce((sum, arr) => {
     for (let el of arr) {

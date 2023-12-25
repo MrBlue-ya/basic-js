@@ -37,7 +37,6 @@ function getSeason(date) {
     return 'winter';
   }
 }
-// console.log(getSeason(new Date(2020, 2, 31)));
 
 module.exports = {
   getSeason

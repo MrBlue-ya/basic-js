@@ -13,39 +13,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  * transform([1, 2, 3, '--discard-prev', 4, 5]) => [1, 2, 4, 5]
  * 
  */
-// function transform(arr) {
-//   if (!Array.isArray(arr)) {
-//     throw new Error("'arr' parameter must be an instance of the Array!");
-//   }
-
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === '--discard-next') {
-//       arr.splice(i, 2);
-//     }
-//     if (arr[i] === '--discard-prev') {
-//       if (i === 0) {
-//         arr.splice(i, 1);
-//         continue;
-//       }
-//       arr.splice(i - 1, 2);
-//     }
-//     if (arr[i] === '--double-next') {
-//       if (i === arr.length - 1) {
-//         arr.splice(i, 1);
-//         continue;
-//       }
-//       arr.splice(i, 1, arr[i + 1]);
-//     }
-//     if (arr[i] === '--double-prev') {
-//       if (i === 0) {
-//         arr.splice(i, 1);
-//         continue;
-//       }
-//       arr.splice(i, 1, arr[i - 1]);
-//     }
-//   }
-//   return arr;
-// }
 
 function transform(arr) {
   if (!Array.isArray(arr)) {
@@ -76,8 +43,6 @@ function transform(arr) {
 
   return result;
 }
-
-console.log(transform([1, 2, 3, '--discard-next', 1337, '--double-prev', 4, 5]));
 
 module.exports = {
   transform
